@@ -1,0 +1,172 @@
+* {
+    /**/
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(31, 33, 37);
+    color: rgb(255, 255, 255);
+}
+
+/* ========================= Smartphone Size ========================= */
+@media (max-width:480px) {}
+
+/* ========================= Tablet Size ========================= */
+@media (min-width:481px),
+(max-width:980px) {}
+
+/* ========================= Desktop Size ========================= */
+@media (min-width:981px) {
+    .brand {
+        margin: auto auto;
+        padding: 0 50px;
+        color: gray;
+        min-width: 670px;
+    }
+
+    .logo {
+        color: black;
+        /*pa que no este "vacio"*/
+        /* PARA QUE PORONGA ALINEARLO 
+        si lo puedo meter en el html y se mueve junto con el contenido del div
+    
+        position: absolute;
+        left: 16.67%;
+        right: 37.43%;
+        top: 0%;
+        bottom: 0%;
+        */
+    }
+
+    .mainCard {
+        position: relative;
+        width: 1024px;
+        height: 83vh;
+        padding: 15px;
+        margin: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+        background-color: rgb(52, 56, 59);
+    }
+
+    .resultCard {
+        position: absolute;
+        width: 300px;
+        height: 75vh;
+        left: 690px;
+        top: 0;
+        padding: 20px 20px 20px 20px;
+        /*padding: arriba. derecha, abajo., izquierda*/
+        margin: 20px 20px 20px 0px;
+        /*margin: arriba. derecha, abajo., izquierda*/
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+        /*border-radius: sup-izq, sup-der, inf-der, inf-izq*/
+        background-color: rgb(16, 74, 141);
+        box-shadow: 0px 0px 15px rgba(0, 110, 255, 0.75);
+    }
+
+    .resultCard p {
+        background-color: rgba(red, green, blue, alpha);
+    }
+
+    .inputUsuario {
+        position: absolute;
+        width: 540px;
+        height: 350px;
+        left: 120px;
+        top: 80px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 150%;
+
+        color: #0A3871;
+        background-color: rgba(173, 173, 173, 0.5);
+        border: none;
+        outline: none;
+        border-radius: 6px;
+    }
+
+    textarea::placeholder {
+        color: var(--dark-blue);
+        font-size: 32px;
+        font-family: 'Inter';
+        font-weight: 400;
+        line-height: 150%;
+        font-style: normal;
+    }
+
+    textarea:focus {
+        background-color: rgba(173, 173, 173, 0.5);
+        box-shadow: 0px 0px 15px rgba(173, 173, 173, 0.75);
+    }
+
+    .exclamIcon {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        left: 150px;
+        top: 71vh;
+
+        opacity: 0.8;
+
+        /* Inside auto layout */
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
+
+    .lowercaseWarning {
+        position: absolute;
+        width: 200px;
+        height: 18px;
+        left: 175px;
+        top: 71vh;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+    } 
+
+    button {
+        width: 228px;
+        height: 47px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+
+        /*padding: 10px 40px;/*padding: vertical. horizontal*/
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        border-radius: 12px;
+    }
+
+    button:hover {
+        box-shadow: 0 0 15px rgba(173, 173, 173, 0.75);
+    }
+
+    .botonEncriptar {
+        position: absolute;
+        left: 150px;
+        top: 75vh;
+        color: #ffffff;
+        background-color: #0A3871;
+    }
+
+    .botonDesencriptar {
+        position: absolute;
+        left: 400px;
+        top: 75vh;
+        color: #ffffff;
+        background-color: rgb(83, 83, 83);
+    }
+}
