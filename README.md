@@ -1,1 +1,0 @@
-# EncriptadorTexto-ONE-Oracle
