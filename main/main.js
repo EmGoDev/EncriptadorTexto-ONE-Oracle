@@ -11,6 +11,6 @@ botonEncriptar.onclick = () => {
     resultText.innerHTML = input.value
     input.value = ""
 }
-
+//intentando hace un cambio cualquiera para borrar el theme jekyyl de mierda
 
 
