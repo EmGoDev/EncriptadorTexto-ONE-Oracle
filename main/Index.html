@@ -11,27 +11,33 @@
 
 <body>
     <p class="brand">Encriptador de texto - Emiliano Gonzalez (github.com/EmGoAR)</p>
-
+    <!--TARJETA PRINCIPAL-->
     <section class="mainCard">
         <!--Título visual con autor color gris-->
         <img class="logo" src="assets/logo.png" alt="LogoAlura">
-
         <!--Input-->
-        <!--<input class="inputUsuario" type="text" placeholder="Ingrese su texto aquí">-->
         <textarea rows="5" cols="60" name="description" class="inputUsuario" placeholder="Ingrese su texto aquí"></textarea>
-
-        <!--<p><input type="submit" value="Encriptar"></p>-->
-        <!--<p><input type="submit" value="Desencriptar"></p>-->
+        <!--Aclaración-->
         <img class="exclamIcon" src="assets/exclamation.png" alt="warning">
         <p class="lowercaseWarning">solo letras minúsculas y sin acentos</p></img>
+        <!--Boton Copiar-->
         <button class="botonEncriptar">Encriptar</button>
         <button class="botonDesencriptar">Desencriptar</button>
 
-        <!--Tarjeta de resultado-->
+        <!--TARJETA DE  NO HAY RESULTADO-->
         <div class="resultCard">
+            <img class="diamondGuy" src="assets/munieco.png" alt="diamondGuy">
+            <p class="noMensaje">Ningún mensaje fue encontrado</p>
+            <p class="noMensajeConsejo">ingresa el texto que desees encriptar o desencriptar</p>
+        </div>
+        <!--TARJETA DE RESULTADO-->
+        <div class="resultCard">
+            
             <p class="resultContent">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, optio harum nihil at voluptatibus,
                 corporis cumque rerum et recusandae eius, officia minus? Qui, similique veritatis. Dolores
                 exercitationem nulla perferendis quis!</p>
+            <button class="botonCopiar">Copiar</button>
+            
         </div>
     </section>
     <script type="text/javascript" src="main.js"></script>

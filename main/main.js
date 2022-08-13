@@ -2,7 +2,7 @@
 let input = document.querySelector("textarea")
 input.focus()
 
-resultText = document.querySelector(".resultCard p")
+resultText = document.querySelector(".resultContent")
 //console.log(resultText.innerHTML)
 
 let botonEncriptar = document.querySelector(".botonEncriptar")
