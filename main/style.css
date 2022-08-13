@@ -9,6 +9,10 @@ body {
     color: rgb(255, 255, 255);
 }
 
+.hide {
+    display: none;
+}
+
 /* ========================= Smartphone Size ========================= */
 @media (max-width:480px) {}
 

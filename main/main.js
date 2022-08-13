@@ -1,12 +1,14 @@
 
+//los queridisimos querySelectors
+//input
 let input = document.querySelector("textarea")
 input.focus()
-
+//output
 resultText = document.querySelector(".resultContent")
-//console.log(resultText.innerHTML)
-
+//BOTONES
 let botonEncriptar = document.querySelector(".botonEncriptar")
 let botonDesencriptar = document.querySelector(".botonDesencriptar")
+let botonCopiar = document.querySelector(".botonCopiar")
 
 function encriptar() {
     resultado = ""
@@ -40,14 +42,48 @@ function desencriptar() {
     return resultado
 }
 
+function noMensajeEncontrado() {
+    let noMensaje = document.querySelector(".noMensaje")
+    let noMensajeConsejo = document.querySelector(".noMensajeConsejo")
+    let diamondGuy = document.querySelector(".diamondGuy")
+    //si el campo de resultados esta ocupado,
+    //ocultar mensaje "Ningun mensaje fue encontrado"
+    //(convertí el innerHTML en string para que el if lo tomara)
+    if ((resultText.innerHTML.replace(/<[^>]*>/g, '')) !== "") {
+        noMensaje.classList.add("hide")
+        noMensajeConsejo.classList.add("hide")
+        diamondGuy.classList.add("hide")
+    } else {
+        noMensaje.classList.remove("hide")
+        noMensajeConsejo.classList.remove("hide")
+        diamondGuy.classList.remove("hide")
+    }
+}
+
+function Copiar() {
+    var textoCopiado = document.querySelector(".portapapeles");
+    textoCopiado.setAttribute('value', resultText.innerHTML);
+
+    textoCopiado.select();
+    document.execCommand('copy');
+}
+
+//ACCIONES DE BOTONES
 botonEncriptar.onclick = () => {
     resultado = encriptar()
     resultText.innerHTML = resultado
+    noMensajeEncontrado()
 }
 
 botonDesencriptar.onclick = () => {
     resultado = desencriptar()
     resultText.innerHTML = resultado
+    noMensajeEncontrado()
 }
 
+botonCopiar.onclick = () => {
+    Copiar()
+}
 
+//al cargar página:
+noMensajeEncontrado()
