@@ -1,24 +1,391 @@
-* {
-    /**/
-    padding: 0;
-    margin: 0;
+:root {
+    --backgroundDarkGray: rgb(31, 33, 37);
+    --BGDarkBlue: rgb(16, 65, 122);
 }
 
-body {
-    background-color: rgb(31, 33, 37);
-    color: rgb(255, 255, 255);
+* {
+    padding: 0;
+    margin: 0;
 }
 
 .hide {
     display: none;
 }
 
+body {
+    background-color: var(--backgroundDarkGray);
+    color: rgb(255, 255, 255);
+}
+
+textarea:hover {
+    cursor: default;
+}
+
 /* ========================= Smartphone Size ========================= */
-@media (max-width:480px) {}
+@media (min-width:1px),
+(max-width:480) {
+    .brand {
+        margin: auto auto;
+        padding: 0 50px;
+        color: gray;
+        min-width: 670px;
+    }
+    .mainCard {
+        position: relative;
+        width: 180px;
+        height: 100px;
+        padding: 15px;
+        margin: 0px 15px;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+        background-color: rgb(52, 56, 59);
+    }
+    .resultCard {
+        position: absolute;
+        width: 430px;
+        height: 300px;
+        left: 20px;
+        top: 580px;
+        padding: 20px 20px 20px 20px;
+        /*padding: arriba. derecha, abajo., izquierda*/
+        margin: 20px 20px 20px 0px;
+        /*margin: arriba. derecha, abajo., izquierda*/
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+        /*border-radius: sup-izq, sup-der, inf-der, inf-izq*/
+        background-color: var(--BGDarkBlue);
+        text-shadow: 0 0 15px white;
+        box-shadow: 0px 0px 15px rgba(0, 89, 206, 0.75);
+    }
+
+    .resultContent {
+        text-shadow: 0 0 15px white;
+        text-align: center;
+    }
+
+    .diamondGuy {
+        display: none;
+    }
+
+    .noMensaje {
+        position: absolute;
+        text-align: center;
+        width: 300px;
+        height: 228px;
+        left: 80px;
+        top: 140px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 120%;
+    }
+
+    .noMensajeConsejo {
+        position: absolute;
+        text-align: center;
+        width: 252px;
+        height: 228px;
+        left: 105px;
+        top: 170px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+    }
+
+    .inputUsuario {
+        position: absolute;
+        width: 470px;
+        height: 420px;
+        left: 20px;
+        top: 70px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 150%;
+
+        color: #4584e2;
+        background-color: rgb(52, 56, 59);
+        border: none;
+        outline: none;
+        border-radius: 6px;
+        resize: none;
+    }
+
+    textarea::placeholder {
+        color: rgba(53, 119, 218, 0.75);
+        text-shadow: 0 0 15px rgb(107, 171, 255);
+        font-size: 32px;
+        font-family: 'Inter';
+        font-weight: 400;
+        line-height: 150%;
+        font-style: normal;
+    }
+
+
+
+    .exclamIcon {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        left: 25px;
+        top: 500px;
+
+        opacity: 0.8;
+
+        /* Inside auto layout */
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
+
+    .lowercaseWarning {
+        position: absolute;
+        width: 200px;
+        height: 18px;
+        left: 50px;
+        top: 500px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+    }
+
+    button {
+        width: 228px;
+        height: 47px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+
+        /*padding: 10px 40px;/*padding: vertical. horizontal*/
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        border-radius: 12px;
+    }
+
+    button:hover {
+        box-shadow: 0 0 15px rgba(173, 173, 173, 0.75);
+    }
+
+    .botonEncriptar {
+        position: absolute;
+        left: 20px;
+        top: 530px;
+        color: #ffffff;
+        background-color: #0A3871;
+    }
+
+    .botonDesencriptar {
+        position: absolute;
+        left: 265px;
+        top: 530px;
+        color: #ffffff;
+        background-color: rgb(83, 83, 83);
+    }
+
+    .botonCopiar {
+        position: absolute;
+        left: 125px;
+        top: 365px;
+        color: #ffffff;
+        background-color: #0A3871;
+    }
+}
 
 /* ========================= Tablet Size ========================= */
 @media (min-width:481px),
-(max-width:980px) {}
+(max-width:980px) {
+    .brand {
+        margin: auto auto;
+        padding: 0 50px;
+        color: gray;
+        min-width: 670px;
+    }
+    .mainCard {
+        position: relative;
+        width: 480px;
+        height: 1000px;
+        padding: 15px;
+        margin: 0px 15px;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+        background-color: rgb(52, 56, 59);
+    }
+    .resultCard {
+        position: absolute;
+        width: 430px;
+        height: 300px;
+        left: 20px;
+        top: 580px;
+        padding: 20px 20px 20px 20px;
+        /*padding: arriba. derecha, abajo., izquierda*/
+        margin: 20px 20px 20px 0px;
+        /*margin: arriba. derecha, abajo., izquierda*/
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+        /*border-radius: sup-izq, sup-der, inf-der, inf-izq*/
+        background-color: var(--BGDarkBlue);
+        text-shadow: 0 0 15px white;
+        box-shadow: 0px 0px 15px rgba(0, 89, 206, 0.75);
+    }
+
+    .resultContent {
+        text-shadow: 0 0 15px white;
+        text-align: center;
+    }
+
+    .diamondGuy {
+        display: none;
+    }
+
+    .noMensaje {
+        position: absolute;
+        text-align: center;
+        width: 300px;
+        height: 228px;
+        left: 80px;
+        top: 140px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 120%;
+    }
+
+    .noMensajeConsejo {
+        position: absolute;
+        text-align: center;
+        width: 252px;
+        height: 228px;
+        left: 105px;
+        top: 170px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+    }
+
+    .inputUsuario {
+        position: absolute;
+        width: 470px;
+        height: 420px;
+        left: 20px;
+        top: 70px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 150%;
+
+        color: #4584e2;
+        background-color: rgb(52, 56, 59);
+        border: none;
+        outline: none;
+        border-radius: 6px;
+        resize: none;
+    }
+
+    textarea::placeholder {
+        color: rgba(53, 119, 218, 0.75);
+        text-shadow: 0 0 15px rgb(107, 171, 255);
+        font-size: 32px;
+        font-family: 'Inter';
+        font-weight: 400;
+        line-height: 150%;
+        font-style: normal;
+    }
+
+
+
+    .exclamIcon {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        left: 25px;
+        top: 500px;
+
+        opacity: 0.8;
+
+        /* Inside auto layout */
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
+
+    .lowercaseWarning {
+        position: absolute;
+        width: 200px;
+        height: 18px;
+        left: 50px;
+        top: 500px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+    }
+
+    button {
+        width: 228px;
+        height: 47px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+
+        /*padding: 10px 40px;/*padding: vertical. horizontal*/
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        border-radius: 12px;
+    }
+
+    button:hover {
+        box-shadow: 0 0 15px rgba(173, 173, 173, 0.75);
+    }
+
+    .botonEncriptar {
+        position: absolute;
+        left: 20px;
+        top: 530px;
+        color: #ffffff;
+        background-color: #0A3871;
+    }
+
+    .botonDesencriptar {
+        position: absolute;
+        left: 265px;
+        top: 530px;
+        color: #ffffff;
+        background-color: rgb(83, 83, 83);
+    }
+
+    .botonCopiar {
+        position: absolute;
+        left: 125px;
+        top: 365px;
+        color: #ffffff;
+        background-color: #0A3871;
+    }
+}
 
 /* ========================= Desktop Size ========================= */
 @media (min-width:981px) {
@@ -29,34 +396,17 @@ body {
         min-width: 670px;
     }
 
-    .logo {
-        color: black;
-        /*pa que no este "vacio"*/
-        /* PARA QUE PORONGA ALINEARLO 
-        si lo puedo meter en el html y se mueve junto con el contenido del div
-    
-        position: absolute;
-        left: 16.67%;
-        right: 37.43%;
-        top: 0%;
-        bottom: 0%;
-        */
-    }
-
     .mainCard {
         position: relative;
         width: 1024px;
         height: 83vh;
         padding: 15px;
-        margin: 20px;
+        margin: 0px 15px;
         border: 1px solid rgba(0, 0, 0, 0.25);
         border-radius: 15px;
         background-color: rgb(52, 56, 59);
     }
 
-    .noResultCard {
-        background-color: rgba(red, green, blue, alpha);
-    }
     .resultCard {
         position: absolute;
         width: 300px;
@@ -70,7 +420,7 @@ body {
         border: 1px solid rgba(0, 0, 0, 0.25);
         border-radius: 15px;
         /*border-radius: sup-izq, sup-der, inf-der, inf-izq*/
-        background-color: rgba(16, 65, 122, 0.75);
+        background-color: var(--BGDarkBlue);
         text-shadow: 0 0 15px white;
         box-shadow: 0px 0px 15px rgba(0, 89, 206, 0.75);
     }
@@ -85,7 +435,7 @@ body {
         width: 252px;
         height: 228px;
         left: 50px;
-        top: 15vh;
+        top: 13vh;
     }
 
     .noMensaje {
@@ -131,15 +481,17 @@ body {
         font-size: 32px;
         line-height: 150%;
 
-        color: #0A3871;
-        background-color: rgba(173, 173, 173, 0.5);
+        color: #4584e2;
+        background-color: rgb(52, 56, 59);
         border: none;
         outline: none;
         border-radius: 6px;
+        resize: none;
     }
 
     textarea::placeholder {
-        color: var(--dark-blue);
+        color: rgba(53, 119, 218, 0.75);
+        text-shadow: 0 0 15px rgb(107, 171, 255);
         font-size: 32px;
         font-family: 'Inter';
         font-weight: 400;
@@ -147,10 +499,7 @@ body {
         font-style: normal;
     }
 
-    textarea:focus {
-        background-color: rgba(173, 173, 173, 0.5);
-        box-shadow: 0px 0px 15px rgba(173, 173, 173, 0.75);
-    }
+
 
     .exclamIcon {
         position: absolute;
