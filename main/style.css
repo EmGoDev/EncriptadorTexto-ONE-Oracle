@@ -23,7 +23,7 @@ textarea:hover {
 }
 
 /* ========================= Smartphone Size ========================= */
-@media only screen and (min-width:1px) and (max-width:500px) {
+@media only screen and (min-width:1px) and (max-width:845px) {
     .brand {
         margin: auto auto;
         padding: 0 50px;
@@ -224,7 +224,7 @@ textarea:hover {
 }
 
 /* ========================= Tablet Size ========================= */
-@media only screen and (min-width:501px) and (max-width:1155px) {
+@media only screen and (min-width:846px) and (max-width:1155px) {
     .brand {
         margin: auto auto;
         padding: 0 50px;
