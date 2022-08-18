@@ -50,9 +50,9 @@ function noMensajeEncontrado() {
     //ocultar mensaje "Ningun mensaje fue encontrado"
     //(convertí el innerHTML en string para que el if lo tomara)
     if ((resultText.innerHTML.replace(/<[^>]*>/g, '')) !== "") {
+        diamondGuy.classList.add("hide")
         noMensaje.classList.add("hide")
         noMensajeConsejo.classList.add("hide")
-        diamondGuy.classList.add("hide")
     } else {
         noMensaje.classList.remove("hide")
         noMensajeConsejo.classList.remove("hide")
@@ -61,11 +61,9 @@ function noMensajeEncontrado() {
 }
 
 function Copiar() {
-    var textoCopiado = document.querySelector(".portapapeles");
-    textoCopiado.setAttribute('value', resultText.innerHTML);
-
-    textoCopiado.select();
-    document.execCommand('copy');
+    //pone en el clipboard lo que vos le señales
+    //en este caso el texto ya (cod/descod)ificado
+    console.log(navigator.clipboard.writeText(resultText.innerHTML))
 }
 
 //ACCIONES DE BOTONES
