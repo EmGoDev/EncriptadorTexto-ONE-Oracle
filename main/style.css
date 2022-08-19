@@ -37,7 +37,7 @@ textarea:hover {
         width: 375px;
         height: 933px;
         padding: 15px;
-        margin: 0px 15px;
+        margin: 0 25px 0 15px;
         border: 1px solid rgba(0, 0, 0, 0.25);
         border-radius: 15px;
         background-color: rgb(52, 56, 59);
