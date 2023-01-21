@@ -464,7 +464,6 @@ textarea:hover {
 		border-radius: 15px;
 		background-color: rgba(52, 56, 59, 0.5);
 		min-width: 328px;
-		max-height: 80vh;
 	}
 
 	.leftSideButtons {
