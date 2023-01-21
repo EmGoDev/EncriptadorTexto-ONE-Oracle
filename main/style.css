@@ -1,624 +1,608 @@
 :root {
-    color-scheme: dark;
-    --backgroundDarkGray: rgb(31, 33, 37);
-    --BGDarkBlue: rgb(16, 65, 122);
+	color-scheme: dark;
+	--backgroundDarkGray: rgb(31, 33, 37);
+	--BGDarkBlue: rgb(16, 65, 122);
 }
 
 * {
-    padding: 0;
-    margin: 0;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	background: rgb(38, 39, 51);
+	background: linear-gradient(
+		74deg,
+		rgba(38, 39, 51, 1) 0%,
+		rgba(46, 53, 78, 1) 60%,
+		rgba(56, 70, 111, 1) 100%
+	);
+	background-attachment: fixed;
+	background-size: cover;
+	color: rgb(255, 255, 255);
 }
 
 .hide {
-    display: none;
-}
-
-body {
-    background-color: var(--backgroundDarkGray);
-    color: rgb(255, 255, 255);
+	display: none;
 }
 
 textarea:hover {
-    cursor: default;
+	cursor: default;
+}
+
+.brand {
+	text-align: center;
+	padding-bottom: 15px;
 }
 
 /* ========================= Smartphone Size ========================= */
-@media only screen and (min-width:1px) and (max-width:845px) {
-    .brand {
-        margin: auto 0;
-        padding: 0 0px;
-        text-align: center;
-        color: gray;
-        max-width: 820px
-    }
+@media only screen and (min-width: 1px) and (max-width: 390px) {
+	body {
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+	}
 
-    .mainCard {
-        position: relative;
-        width: 375px;
-        height: 933px;
-        padding: 15px;
-        margin: 0 25px 0 15px;
-        border: 1px solid rgba(0, 0, 0, 0.25);
-        border-radius: 15px;
-        background-color: rgb(52, 56, 59);
-    }
+	.mainCard {
+		display: flex;
+		flex-direction: column;
+		height: max-content;
+		justify-content: space-between;
+		gap: 15px;
+	}
 
-    .resultCard {
-        position: absolute;
-        width: 297px;
-        height: 243px;
-        left: 35px;
-        top: 635px;
-        padding: 20px 20px 20px 20px;
-        /*padding: arriba. derecha, abajo., izquierda*/
-        margin: 20px 20px 20px 0px;
-        /*margin: arriba. derecha, abajo., izquierda*/
-        border: 1px solid rgba(0, 0, 0, 0.25);
-        border-radius: 15px;
-        /*border-radius: sup-izq, sup-der, inf-der, inf-izq*/
-        background-color: var(--BGDarkBlue);
-        text-shadow: 0 0 15px white;
-        box-shadow: 0px 0px 15px rgba(0, 89, 206, 0.75);
-    }
+	.mainLeftSide {
+		display: flex;
+		flex-direction: column;
+		float: left;
+		padding: 15px;
+		margin: 0 15px;
+		border: 1px solid rgba(0, 0, 0, 0.25);
+		border-radius: 15px;
+		background-color: rgba(52, 56, 59, 0.5);
+	}
 
-    .resultContent {
-        text-shadow: 0 0 15px white;
-        text-align: center;
-        overflow: auto;
-        width: 300px;
-        height:170px;
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 150%;
+	.mainLeftSide > h1 {
+		text-align: center;
+		margin-bottom: 15px;
+	}
 
-        flex: none;
-        order: 0;
-        flex-grow: 0;
-    }
+	.mainRightSide {
+		display: flex;
+		flex-direction: column;
+		float: right;
+		padding: 15px;
+		margin: 0 15px;
+		margin-bottom: 15px;
+		border: 1px solid rgba(0, 0, 0, 0.25);
+		border-radius: 15px;
+		background-color: rgba(52, 56, 59, 0.5);
+	}
 
-    .diamondGuy {
-        position: absolute;
-        width: 252px;
-        height: 228px;
-        left: 50px;
-        top: -5000vh;
-    }
+	.leftSideButtons {
+		display: flex;
+		flex-direction: column;
+	}
 
-    .noMensaje {
-        position: absolute;
-        text-align: center;
-        width: 300px;
-        height: 228px;
-        left: 20px;
-        top: 50px;
+	.warningDiv {
+		display: flex;
+		flex-direction: row;
+		gap: 5px;
+		align-items: center;
+		margin: 15px 0;
+		padding-left: 5px;
+	}
 
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 120%;
-    }
+	.resultCard {
+		padding: 20px 20px 20px 20px;
+		/*padding: arriba. derecha, abajo., izquierda*/
+		/*margin: arriba. derecha, abajo., izquierda*/
+		border: 1px solid rgba(0, 0, 0, 0.25);
+		border-radius: 15px;
+		/*border-radius: sup-izq, sup-der, inf-der, inf-izq*/
+		background-color: var(--BGDarkBlue);
+		text-shadow: 0 0 15px white;
+		box-shadow: 0px 0px 15px rgba(0, 89, 206, 0.75);
+	}
 
-    .noMensajeConsejo {
-        position: absolute;
-        text-align: center;
-        width: 250px;
-        height: 228px;
-        left: 45px;
-        top: 120px;
+	.resultCard > img {
+		width: 100%;
+	}
 
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 150%;
-    }
+	.resultContent {
+		text-shadow: 0 0 15px white;
+		text-align: center;
+		overflow: auto;
+		height: 170px;
+		font-family: "Inter";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 150%;
 
-    .inputUsuario {
-        position: absolute;
-        width: 338px;
-        height: 320px;
-        left: 35px;
-        top: 120px;
+		flex: none;
+		order: 0;
+		flex-grow: 0;
+	}
 
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 32px;
-        line-height: 150%;
+	.noMensaje {
+		text-align: center;
 
-        color: #4584e2;
-        background-color: rgb(52, 56, 59);
-        border: none;
-        outline: none;
-        border-radius: 6px;
-        resize: none;
-    }
+		font-family: "Inter";
+		font-style: normal;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 120%;
+	}
 
-    textarea::placeholder {
-        color: rgba(53, 119, 218, 0.75);
-        text-shadow: 0 0 15px rgb(107, 171, 255);
-        font-size: 32px;
-        font-family: 'Inter';
-        font-weight: 400;
-        line-height: 150%;
-        font-style: normal;
-    }
+	.noMensajeConsejo {
+		text-align: center;
 
+		font-family: "Inter";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 150%;
+	}
 
+	.inputUsuario {
+		display: block;
 
-    .exclamIcon {
-        position: absolute;
-        width: 18px;
-        height: 18px;
-        left: 35px;
-        top: 450px;
+		font-family: "Inter";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 32px;
+		line-height: 150%;
 
-        opacity: 0.8;
+		color: #4584e2;
+		background-color: rgb(52, 56, 59);
+		border: none;
+		outline: none;
+		border-radius: 6px;
+		resize: none;
+	}
 
-        /* Inside auto layout */
-        flex: none;
-        order: 1;
-        flex-grow: 0;
-    }
+	textarea::placeholder {
+		color: rgba(53, 119, 218, 0.75);
+		text-shadow: 0 0 15px rgb(107, 171, 255);
+		font-size: 32px;
+		font-family: "Inter";
+		font-weight: 400;
+		line-height: 150%;
+		font-style: normal;
+	}
 
-    .lowercaseWarning {
-        position: absolute;
-        width: 200px;
-        height: 18px;
-        left: 60px;
-        top: 450px;
+	.lowercaseWarning {
+		font-family: "Inter";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 150%;
+	}
 
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 150%;
-    }
+	button {
+		font-family: "Inter";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 19px;
+		text-align: center;
+		/*padding: 10px 40px;
+		/*padding:;
+		vertical.horizontal*/
+		padding: 5px;
+		border: 1px solid rgba(0, 0, 0, 0.5);
+		border-radius: 6px;
+		-webkit-border-radius: 6px;
+		-moz-border-radius: 6px;
+		-ms-border-radius: 6px;
+		-o-border-radius: 6px;
+	}
 
-    button {
-        width: 328px;
-        height: 67px;
+	button:hover {
+		box-shadow: 0 0 15px rgba(173, 173, 173, 0.75);
+	}
 
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19px;
-        text-align: center;
+	.botonEncriptar {
+		color: #ffffff;
+		background-color: #0a3871;
+	}
 
-        /*padding: 10px 40px;/*padding: vertical. horizontal*/
-        border: 1px solid rgba(0, 0, 0, 0.5);
-        border-radius: 15px;
-    }
+	.botonDesencriptar {
+		color: #ffffff;
+		background-color: rgb(83, 83, 83);
+		margin-top: 10px;
+	}
 
-    button:hover {
-        box-shadow: 0 0 15px rgba(173, 173, 173, 0.75);
-    }
-
-    .botonEncriptar {
-        position: absolute;
-        left: 40px;
-        top: 480px;
-        color: #ffffff;
-        background-color: #0A3871;
-    }
-
-    .botonDesencriptar {
-        position: absolute;
-        left: 40px;
-        top: 560px;
-        color: #ffffff;
-        background-color: rgb(83, 83, 83);
-    }
-
-    .botonCopiar {
-        position: absolute;
-        width: 300px;
-        left: 17px;
-        top: 200px;
-        color: #ffffff;
-        background-color: #013473;
-    }
+	.botonCopiar {
+		color: #ffffff;
+		background-color: #013473;
+		width: 100%;
+	}
 }
 
-/* ========================= Tablet Size ========================= */
-@media only screen and (min-width:846px) and (max-width:1155px) {
-    .brand {
-        margin: auto auto;
-        padding: 0 50px;
-        color: gray;
-    }
+/* ======================== Little Tablet Size ======================== */
+@media only screen and (min-width: 391px) and (max-width: 768px) {
+	.brand {
+		text-align: center;
+		padding-bottom: 15px;
+		width: 80%;
+		margin: auto;
+	}
 
-    .mainCard {
-        position: relative;
-        width: 768px;
-        height: 1124px;
-        padding: 15px;
-        margin: 0px 15px;
-        border: 1px solid rgba(0, 0, 0, 0.25);
-        border-radius: 15px;
-        background-color: rgb(52, 56, 59);
-    }
+	body {
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+	}
 
-    .resultCard {
-        position: absolute;
-        width: 688px;
-        height: 343px;
-        left: 35px;
-        top: 715px;
-        padding: 20px 20px 20px 20px;
-        /*padding: arriba. derecha, abajo., izquierda*/
-        margin: 20px 20px 20px 0px;
-        /*margin: arriba. derecha, abajo., izquierda*/
-        border: 1px solid rgba(0, 0, 0, 0.25);
-        border-radius: 15px;
-        /*border-radius: sup-izq, sup-der, inf-der, inf-izq*/
-        background-color: var(--BGDarkBlue);
-        text-shadow: 0 0 15px white;
-        box-shadow: 0px 0px 15px rgba(0, 89, 206, 0.75);
-    }
+	.mainCard {
+		display: flex;
+		flex-direction: column;
+		height: max-content;
+		gap: 15px;
+		width: 390px;
+		margin: auto;
+	}
 
-    .resultContent {
-        text-shadow: 0 0 15px white;
-        text-align: center;
-        overflow: auto;
-        width: 700px;
-        height:270px;
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 150%;
+	.mainLeftSide {
+		display: flex;
+		flex-direction: column;
+		float: left;
+		padding: 15px;
+		margin: 0 15px;
+		border: 1px solid rgba(0, 0, 0, 0.25);
+		border-radius: 15px;
+		background-color: rgba(52, 56, 59, 0.5);
+	}
 
-        flex: none;
-        order: 0;
-        flex-grow: 0;
-    }
+	.mainLeftSide > h1 {
+		text-align: center;
+		margin-bottom: 15px;
+	}
 
-    .diamondGuy {
-        position: absolute;
-        width: 252px;
-        height: 228px;
-        left: 50px;
-        top: -5000vh;
-    }
+	.mainRightSide {
+		display: flex;
+		flex-direction: column;
+		float: right;
+		padding: 15px;
+		margin: 0 15px;
+		margin-bottom: 15px;
+		border: 1px solid rgba(0, 0, 0, 0.25);
+		border-radius: 15px;
+		background-color: rgba(52, 56, 59, 0.5);
+	}
 
-    .noMensaje {
-        position: absolute;
-        text-align: center;
-        width: 620px;
-        height: 228px;
-        left: 50px;
-        top: 140px;
+	.leftSideButtons {
+		display: flex;
+		flex-direction: column;
+	}
 
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 120%;
-    }
+	.warningDiv {
+		display: flex;
+		flex-direction: row;
+		gap: 5px;
+		align-items: center;
+		margin: 15px 0;
+		padding-left: 5px;
+	}
 
-    .noMensajeConsejo {
-        position: absolute;
-        text-align: center;
-        width: 620px;
-        height: 228px;
-        left: 50px;
-        top: 170px;
+	.resultCard {
+		padding: 20px 20px 20px 20px;
+		/*padding: arriba. derecha, abajo., izquierda*/
+		/*margin: arriba. derecha, abajo., izquierda*/
+		border: 1px solid rgba(0, 0, 0, 0.25);
+		border-radius: 15px;
+		/*border-radius: sup-izq, sup-der, inf-der, inf-izq*/
+		background-color: var(--BGDarkBlue);
+		text-shadow: 0 0 15px white;
+		box-shadow: 0px 0px 15px rgba(0, 89, 206, 0.75);
+	}
 
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 150%;
-    }
+	.resultCard > img {
+		width: 100%;
+	}
 
-    .inputUsuario {
-        position: absolute;
-        width: 720px;
-        height: 420px;
-        left: 35px;
-        top: 120px;
+	.resultContent {
+		text-shadow: 0 0 15px white;
+		text-align: center;
+		overflow: auto;
+		height: 170px;
+		font-family: "Inter";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 150%;
 
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 32px;
-        line-height: 150%;
+		flex: none;
+		order: 0;
+		flex-grow: 0;
+	}
 
-        color: #4584e2;
-        background-color: rgb(52, 56, 59);
-        border: none;
-        outline: none;
-        border-radius: 6px;
-        resize: none;
-    }
+	.noMensaje {
+		text-align: center;
 
-    textarea::placeholder {
-        color: rgba(53, 119, 218, 0.75);
-        text-shadow: 0 0 15px rgb(107, 171, 255);
-        font-size: 32px;
-        font-family: 'Inter';
-        font-weight: 400;
-        line-height: 150%;
-        font-style: normal;
-    }
+		font-family: "Inter";
+		font-style: normal;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 120%;
+	}
 
+	.noMensajeConsejo {
+		text-align: center;
 
+		font-family: "Inter";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 150%;
+	}
 
-    .exclamIcon {
-        position: absolute;
-        width: 18px;
-        height: 18px;
-        left: 55px;
-        top: 570px;
+	.inputUsuario {
+		display: block;
 
-        opacity: 0.8;
+		font-family: "Inter";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 32px;
+		line-height: 150%;
 
-        /* Inside auto layout */
-        flex: none;
-        order: 1;
-        flex-grow: 0;
-    }
+		color: #4584e2;
+		background-color: rgb(52, 56, 59);
+		border: none;
+		outline: none;
+		border-radius: 6px;
+		resize: none;
+		width: 328px;
+	}
 
-    .lowercaseWarning {
-        position: absolute;
-        width: 200px;
-        height: 18px;
-        left: 85px;
-        top: 570px;
+	textarea::placeholder {
+		color: rgba(53, 119, 218, 0.75);
+		text-shadow: 0 0 15px rgb(107, 171, 255);
+		font-size: 32px;
+		font-family: "Inter";
+		font-weight: 400;
+		line-height: 150%;
+		font-style: normal;
+	}
 
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 150%;
-    }
+	.lowercaseWarning {
+		font-family: "Inter";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 150%;
+	}
 
-    button {
-        width: 328px;
-        height: 67px;
+	button {
+		font-family: "Inter";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 19px;
+		text-align: center;
+		/*padding: 10px 40px;
+		/*padding:;
+		vertical.horizontal*/
+		padding: 5px;
+		border: 1px solid rgba(0, 0, 0, 0.5);
+		border-radius: 6px;
+		-webkit-border-radius: 6px;
+		-moz-border-radius: 6px;
+		-ms-border-radius: 6px;
+		-o-border-radius: 6px;
+	}
 
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19px;
-        text-align: center;
+	button:hover {
+		box-shadow: 0 0 15px rgba(173, 173, 173, 0.75);
+	}
 
-        /*padding: 10px 40px;/*padding: vertical. horizontal*/
-        border: 1px solid rgba(0, 0, 0, 0.5);
-        border-radius: 15px;
-    }
+	.botonEncriptar {
+		color: #ffffff;
+		background-color: #0a3871;
+	}
 
-    button:hover {
-        box-shadow: 0 0 15px rgba(173, 173, 173, 0.75);
-    }
+	.botonDesencriptar {
+		color: #ffffff;
+		background-color: rgb(83, 83, 83);
+		margin-top: 10px;
+	}
 
-    .botonEncriptar {
-        position: absolute;
-        left: 55px;
-        top: 600px;
-        color: #ffffff;
-        background-color: #0A3871;
-    }
-
-    .botonDesencriptar {
-        position: absolute;
-        left: 410px;
-        top: 600px;
-        color: #ffffff;
-        background-color: rgb(83, 83, 83);
-    }
-
-    .botonCopiar {
-        position: absolute;
-        width: 640px;
-        left: 45px;
-        top: 300px;
-        color: #ffffff;
-        background-color: #013473;
-    }
+	.botonCopiar {
+		color: #ffffff;
+		background-color: #013473;
+		width: 100%;
+	}
 }
 
-/* ========================= Desktop Size ========================= */
-@media only screen and (min-width:1156px) {
-    .brand {
-        margin: auto auto;
-        padding: 0 50px;
-        color: gray;
-    }
+/* ================ Big Tablet / low res Desktop Size ================= */
+@media only screen and (min-width: 769px) {
+	.brand {
+		text-align: center;
+		padding-bottom: 15px;
+	}
 
-    .mainCard {
-        position: relative;
-        width: 1075px;
-        height: 81vh;
-        padding: 15px;
-        margin: 0px 15px;
-        border: 1px solid rgba(0, 0, 0, 0.25);
-        border-radius: 15px;
-        background-color: rgb(52, 56, 59);
-    }
+	body {
+		height: 100vh;
+	}
 
-    .resultCard {
-        position: absolute;
-        width: 300px;
-        height: 75vh;
-        left: 740px;
-        top: 0;
-        padding: 20px 20px 20px 20px;
-        /*padding: arriba. derecha, abajo., izquierda*/
-        margin: 20px 20px 20px 0px;
-        /*margin: arriba. derecha, abajo., izquierda*/
-        border: 1px solid rgba(0, 0, 0, 0.25);
-        border-radius: 15px;
-        /*border-radius: sup-izq, sup-der, inf-der, inf-izq*/
-        background-color: var(--BGDarkBlue);
-        text-shadow: 0 0 15px white;
-        box-shadow: 0px 0px 15px rgba(0, 89, 206, 0.75);
-    }
+	.mainCard {
+		display: flex;
+		flex-direction: row;
+		height: max-content;
+		gap: 15px;
+		box-sizing: content-box;
+		justify-content: center;
+	}
 
-    .resultContent {
-        text-shadow: 0 0 15px white;
-        text-align: center;
-        overflow: auto;
-        width: 310px;
-        height:67vh;
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 150%;
+	.mainLeftSide {
+		display: flex;
+		flex-direction: column;
+		float: left;
+		padding: 15px;
+		margin: 0 15px;
+		border: 1px solid rgba(0, 0, 0, 0.25);
+		border-radius: 15px;
+		background-color: rgba(52, 56, 59, 0.5);
+		max-height: 80vh;
+	}
 
-        flex: none;
-        order: 0;
-        flex-grow: 0;
-    }
+	.mainLeftSide > h1 {
+		text-align: center;
+		margin-bottom: 15px;
+	}
 
-    .diamondGuy {
-        position: absolute;
-        width: 252px;
-        height: 228px;
-        left: 50px;
-        top: 13vh;
-    }
+	.mainRightSide {
+		display: flex;
+		flex-direction: column;
+		float: right;
+		padding: 15px;
+		margin: 0 15px;
+		margin-bottom: 15px;
+		border: 1px solid rgba(0, 0, 0, 0.25);
+		border-radius: 15px;
+		background-color: rgba(52, 56, 59, 0.5);
+		min-width: 328px;
+		max-height: 80vh;
+	}
 
-    .noMensaje {
-        position: absolute;
-        text-align: center;
-        width: 300px;
-        height: 228px;
-        left: 22px;
-        top: 47vh;
+	.leftSideButtons {
+		display: flex;
+		flex-direction: column;
+	}
 
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 120%;
-    }
+	.warningDiv {
+		display: flex;
+		flex-direction: row;
+		gap: 5px;
+		align-items: center;
+		margin: 15px 0;
+		padding-left: 5px;
+	}
 
-    .noMensajeConsejo {
-        position: absolute;
-        text-align: center;
-        width: 252px;
-        height: 228px;
-        left: 44px;
-        top: 50vh;
+	.resultCard {
+		padding: 20px 20px 20px 20px;
+		/*padding: arriba. derecha, abajo., izquierda*/
+		/*margin: arriba. derecha, abajo., izquierda*/
+		border: 1px solid rgba(0, 0, 0, 0.25);
+		border-radius: 15px;
+		/*border-radius: sup-izq, sup-der, inf-der, inf-izq*/
+		background-color: var(--BGDarkBlue);
+		text-shadow: 0 0 15px white;
+		box-shadow: 0px 0px 15px rgba(0, 89, 206, 0.75);
+	}
 
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 150%;
-    }
+	.resultCard > img {
+		width: 75%;
+	}
 
-    .inputUsuario {
-        position: absolute;
-        width: 600px;
-        height: 60vh;
-        left: 120px;
-        top: 80px;
+	.resultContent {
+		text-shadow: 0 0 15px white;
+		text-align: center;
+		overflow: auto;
+		height: 170px;
+		font-family: "Inter";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 150%;
 
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 32px;
-        line-height: 150%;
+	}
 
-        color: #4584e2;
-        background-color: rgb(52, 56, 59);
-        border: none;
-        outline: none;
-        border-radius: 6px;
-        resize: none;
-    }
+	.noMensaje {
+		text-align: center;
 
-    textarea::placeholder {
-        color: rgba(53, 119, 218, 0.75);
-        text-shadow: 0 0 15px rgb(107, 171, 255);
-        font-size: 32px;
-        font-family: 'Inter';
-        font-weight: 400;
-        line-height: 150%;
-        font-style: normal;
-    }
+		font-family: "Inter";
+		font-style: normal;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 120%;
+	}
 
+	.noMensajeConsejo {
+		text-align: center;
 
+		font-family: "Inter";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 150%;
+	}
 
-    .exclamIcon {
-        position: absolute;
-        width: 18px;
-        height: 18px;
-        left: 110px;
-        top: 71vh;
+	.inputUsuario {
+		display: block;
 
-        opacity: 0.8;
+		font-family: "Inter";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 32px;
+		line-height: 150%;
 
-        /* Inside auto layout */
-        flex: none;
-        order: 1;
-        flex-grow: 0;
-    }
+		color: #4584e2;
+		background-color: rgb(52, 56, 59);
+		border: none;
+		outline: none;
+		border-radius: 6px;
+		resize: none;
+		
+	}
 
-    .lowercaseWarning {
-        position: absolute;
-        width: 200px;
-        height: 18px;
-        left: 135px;
-        top: 71vh;
+	textarea::placeholder {
+		color: rgba(53, 119, 218, 0.75);
+		text-shadow: 0 0 15px rgb(107, 171, 255);
+		font-size: 32px;
+		font-family: "Inter";
+		font-weight: 400;
+		line-height: 150%;
+		font-style: normal;
+	}
 
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 150%;
-    }
+	.lowercaseWarning {
+		font-family: "Inter";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 150%;
+	}
 
-    button {
-        width: 300px;
-        height: 60px;
+	button {
+		font-family: "Inter";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 19px;
+		text-align: center;
+		/*padding: 10px 40px;
+			/*padding:;
+			vertical.horizontal*/
+		padding: 5px;
+		border: 1px solid rgba(0, 0, 0, 0.5);
+		border-radius: 6px;
+		-webkit-border-radius: 6px;
+		-moz-border-radius: 6px;
+		-ms-border-radius: 6px;
+		-o-border-radius: 6px;
+	}
 
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19px;
-        text-align: center;
+	button:hover {
+		box-shadow: 0 0 15px rgba(173, 173, 173, 0.75);
+	}
 
-        /*padding: 10px 40px;/*padding: vertical. horizontal*/
-        border: 1px solid rgba(0, 0, 0, 0.5);
-        border-radius: 12px;
-    }
+	.botonEncriptar {
+		color: #ffffff;
+		background-color: #0a3871;
+	}
 
-    button:hover {
-        box-shadow: 0 0 15px rgba(173, 173, 173, 0.75);
-    }
+	.botonDesencriptar {
+		color: #ffffff;
+		background-color: rgb(83, 83, 83);
+		margin-top: 10px;
+	}
 
-    .botonEncriptar {
-        position: absolute;
-        left: 110px;
-        top: 75vh;
-        color: #ffffff;
-        background-color: #0A3871;
-    }
-
-    .botonDesencriptar {
-        position: absolute;
-        left: 420px;
-        top: 75vh;
-        color: #ffffff;
-        background-color: rgb(83, 83, 83);
-    }
-
-    .botonCopiar {
-        position: absolute;
-        left: 20px;
-        top: 72vh;
-        color: #ffffff;
-        background-color: #0A3871;
-    }
+	.botonCopiar {
+		color: #ffffff;
+		background-color: #013473;
+		width: 100%;
+	}
 }

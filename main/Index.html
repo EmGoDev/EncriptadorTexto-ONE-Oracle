@@ -10,29 +10,45 @@
 <!---->
 
 <body>
+    <!--Título visual con autor color gris-->
     <p class="brand">Encriptador de texto - Emiliano Gonzalez (github.com/EmGoAR)</p>
     <!--TARJETA PRINCIPAL-->
     <section class="mainCard">
-        <!--Título visual con autor color gris-->
-        <a href="https://www.aluracursos.com/"><img src="assets/logo.png" alt="LogoAlura" width="30px"></a>
-        <!--Input-->
-        <textarea rows="5" cols="20" name="description" class="inputUsuario" placeholder=" Ingrese su texto aquí"></textarea>
-        <!--Aclaración-->
-        <img class="exclamIcon" src="assets/exclamation.png" alt="warning">
-        <p class="lowercaseWarning">Sólo letras minúsculas y sin acentos</p></img>
-        <!--Boton Copiar-->
-        <button class="botonEncriptar">Encriptar</button>
-        <button class="botonDesencriptar">Desencriptar</button>
 
-        <!--TARJETA DE RESULTADO-->
-        <div class="resultCard">
-            <img class="diamondGuy" src="assets/munieco.png" alt="diamondGuy">
-            <p class="noMensaje">Ningún mensaje fue encontrado</p>
-            <p class="noMensajeConsejo">ingresa el texto que desees encriptar o desencriptar</p>
-            <!--Este de aqui es el texto de respuesta:-->
-            <p class="resultContent"></p>
-            <button class="botonCopiar">Copiar</button>
+        <div class="mainLeftSide">
+            <!--Logo-->
+            <h1>Text Encryptor</h1>
+            <!--Input-->
+            <textarea rows="5" cols="20" name="description" class="inputUsuario" placeholder=" Ingrese su texto aquí">
+            </textarea>
+
+            <div class="leftSideButtons">
+                <div class="warningDiv">
+                    <!--Aclaración-->
+                    <img src="assets/exclamation.png" alt="warning" width="20px">
+                    <p class="lowercaseWarning">Only lowercase letters and no special Characters</p></img>
+                </div>
+                <!--Boton Copiar-->
+                <button class="botonEncriptar">Encrypt</button>
+                <button class="botonDesencriptar">Decrypt</button>
+            </div>
+
         </div>
+
+        <div class="mainRightSide ">
+            <!--TARJETA DE RESULTADO-->
+            <div class="resultCard">
+                <img class="diamondGuy" src="assets/munieco.png" alt="diamondGuy">
+                <p class="noMensaje">No Message was found</p>
+                <p class="noMensajeConsejo">Enter the text you want to encrypt or decrypt</p>
+                <!--Este de aqui es el texto de respuesta:-->
+                <p class="resultContent"></p>
+                <button class="botonCopiar">Copy</button>
+            </div>
+        </div>
+
+
+
     </section>
     <script type="text/javascript" src="main.js"></script>
 </body>
